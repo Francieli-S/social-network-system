@@ -1,9 +1,9 @@
 interface IUser {
   id: number
   name: string
-  profilePicture: string
-  friends: number[]
-  statusMessage: string
+  profilePicture?: string
+  friends?: number[]
+  statusMessage?: string
 }
 
 interface UserState {

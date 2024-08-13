@@ -8,7 +8,7 @@ interface AuthState {
 }
 
 interface addAuthUserAction {
-  type: 'ADD_AUTH_USER'
+  type: 'LOGIN'
   auth: IAuth
 }
 
