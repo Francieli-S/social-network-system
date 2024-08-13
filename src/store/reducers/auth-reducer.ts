@@ -7,14 +7,16 @@ const reducerAuth = (
   action: AuthAction
 ): AuthState => {
   switch (action.type) {
-    case 'ADD_AUTH_USER':
+    case 'LOGIN':
       const currentAuthUser: IAuth = {
         isLoggedIn: true,
         currentUserId: action.auth.currentUserId,
       };
-      return { auth: currentAuthUser };
+      return { ...state, auth: currentAuthUser };
 
     default:
       return state;
   }
 };
+
+export default reducerAuth

@@ -26,10 +26,13 @@ const reducerUser = (
       return {
         ...state, users: state.users.concat(newUser)
       }
-    case 'SET_STATUS_MESSAGE':    
+    // case 'SET_STATUS_MESSAGE': 
+    // case 'ADD_FRIEND':
     
     default:
     return state;
   }
 
 };
+
+export default reducerUser
