@@ -16,19 +16,12 @@ const reducerUser = (
 ): UserState => {
   switch (action.type) {
     case 'ADD_USER':
-      const newUser: IUser = {
-        id: Math.random(),
-        name: action.user.name,
-        profilePicture: action.user.profilePicture,
-        friends: action.user.friends,
-        statusMessage: action.user.statusMessage
-      };
       return {
-        ...state, users: state.users.concat(newUser)
+        ...state, users: [...state.users, {id: Math.floor(Math.random() * 100), ...action.user } ]
       }
     // case 'SET_STATUS_MESSAGE': 
     // case 'ADD_FRIEND':
-    
+
     default:
     return state;
   }
