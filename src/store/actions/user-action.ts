@@ -4,6 +4,7 @@ export function addUser(user: IUser) {
     type: 'ADD_USER',
     user,
   };
+  return action;
 }
 
 // set user status message
@@ -13,6 +14,7 @@ export function setStatusMessage(user: IUser) {
     type: 'SET_STATUS_MESSAGE',
     user,
   };
+  return action;
 }
 
 // add user's friends.id
@@ -21,4 +23,5 @@ export function addFriend(user: IUser) {
     type: 'ADD_FRIEND',
     user,
   };
+  return action;
 }
