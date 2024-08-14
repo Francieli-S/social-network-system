@@ -1,5 +1,5 @@
 interface IUser {
-  id: number
+  id?: number // make it optional here is not the best idea, but...
   name: string
   profilePicture?: string
   friends?: number[]
@@ -9,12 +9,6 @@ interface IUser {
 interface UserState {
   users: IUser[]
 }
-
-// ??
-// interface RootState {
-//   userState: UserState
-//   userAuth: AuthState
-// }
 
 // User actions types:
 interface AddUserAction {
@@ -31,8 +25,6 @@ interface addFriendAction {
   type: 'ADD_FRIEND'
   user: IUser
 }
-
-// later: update user status message
 
 type UserAction = AddUserAction | SetStatusMessageAction | addFriendAction
 

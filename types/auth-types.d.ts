@@ -1,6 +1,7 @@
 interface IAuth {
   isLoggedIn: boolean
   currentUserId: number | null
+  error?: string
 }
 
 interface AuthState {
