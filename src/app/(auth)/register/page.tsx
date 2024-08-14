@@ -1,15 +1,15 @@
 'use client'
 import { RootState } from '@/store/store';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
 import { addUser } from '@/store/actions/user-action';
+import { redirect } from 'next/navigation';
 
 const Register: React.FC = () => {
-  // if we are using global state, why to save local? Is it because we have to save the inputs 
-  // before call the dispatch?
   const [name, setName] = useState('')
   const [profilePicture, setProfilePicture] = useState('')
+  const [userRegistered, setUserRegistered] = useState(false);
 
   // it selects one of the two reducer: reducerAuth or reducerUser from the store
   const userState = useSelector((state: RootState) => state.reducerUser.users)
@@ -20,7 +20,15 @@ const Register: React.FC = () => {
     e.preventDefault()
     const action: IUser = {name, profilePicture}
     dispatch(addUser(action))
+    setUserRegistered(true)
   }
+  console.log(userState);
+
+  useEffect(() => {
+    if (userRegistered) {
+      redirect('/login'); 
+    }
+  }, [userRegistered])
 
   return (
     <>
