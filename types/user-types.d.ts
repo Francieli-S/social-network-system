@@ -19,11 +19,13 @@ interface AddUserAction {
 interface UpdateStatusMessageAction {
   type: 'UPDATE_STATUS_MESSAGE'
   user: IUser
+  newStatusMessage: string
 }
 
 interface AddFriendAction {
   type: 'ADD_FRIEND'
   user: IUser
+  newFriend: number
 }
 
 type UserAction = AddUserAction | UpdateStatusMessageAction | AddFriendAction
