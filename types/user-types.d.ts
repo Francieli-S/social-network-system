@@ -16,16 +16,16 @@ interface AddUserAction {
   user: IUser
 }
 
-interface SetStatusMessageAction {
-  type: 'SET_STATUS_MESSAGE'
+interface UpdateStatusMessageAction {
+  type: 'UPDATE_STATUS_MESSAGE'
   user: IUser
 }
 
-interface addFriendAction {
+interface AddFriendAction {
   type: 'ADD_FRIEND'
   user: IUser
 }
 
-type UserAction = AddUserAction | SetStatusMessageAction | addFriendAction
+type UserAction = AddUserAction | UpdateStatusMessageAction | AddFriendAction
 
 
