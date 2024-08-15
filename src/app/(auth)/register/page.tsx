@@ -1,18 +1,17 @@
 'use client'
-import { RootState } from '@/store/store';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
 import { addUser } from '@/store/actions/user-action';
 import { redirect } from 'next/navigation';
+import { StateUsersAuth } from '@/store/reducers/reducer';
 
 const Register: React.FC = () => {
   const [name, setName] = useState('')
   const [profilePicture, setProfilePicture] = useState('')
   const [userRegistered, setUserRegistered] = useState(false);
 
-  // it selects one of the two reducer: reducerAuth or reducerUser from the store
-  const userState = useSelector((state: RootState) => state.reducerUser.users)
+  const userState = useSelector((state: StateUsersAuth) => state.users)
   
   const dispatch: Dispatch<UserAction> = useDispatch()
 

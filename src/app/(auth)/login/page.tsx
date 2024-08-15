@@ -1,18 +1,17 @@
 'use client';
 import { addAuthUser } from '@/store/actions/auth-action';
-import { RootState } from '@/store/store';
 import { redirect } from 'next/navigation';
 import { useSelector, useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect, useState } from 'react';
+import { StateUsersAuth } from '@/store/reducers/reducer';
 
 const Login: React.FC = () => {
   const [userId, setUserId] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [userRegistered, setUserRegistered] = useState(true);
 
-  // it selects one of the two reducer: reducerAuth or reducerUser from the store
-  const authState = useSelector((state: RootState) => state.reducerAuth.auth);
+  const authState = useSelector((state: StateUsersAuth) => state.auth);
 
   const dispatch: Dispatch<AuthAction> = useDispatch();
 
@@ -24,7 +23,7 @@ const Login: React.FC = () => {
 
   useEffect(() => {
     if (authState.isLoggedIn) {
-      redirect('/');
+      redirect('/profile');
     }
     if (authState.error) {
       setErrorMessage(authState.error);
