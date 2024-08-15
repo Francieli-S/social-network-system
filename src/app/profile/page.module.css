@@ -1,3 +1,27 @@
+.container {
+  width: 100vw;
+  margin: 0 auto;
+  background-color: cornsilk;
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+  gap: 30px;
+}
+
+.profile {
+  width: 70%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.feed {
+  width: 30%;
+  background-color: cornsilk;
+  border-radius: 20px;
+  padding: 0 10px 0 10px;
+}
+
 .profilePicture {
  width: 20%;
 }
