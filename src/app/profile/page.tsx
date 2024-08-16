@@ -48,7 +48,7 @@ const Profile: React.FC = () => {
         <h3>Hi, {loggedUser && loggedUser.name}</h3>
         <div>
           <h4>Status: {loggedUser?.statusMessage}</h4>
-          <button onClick={showUpdateInput}>Update</button>
+          <button onClick={showUpdateInput}>Update status</button>
           {isUpdatingStatusMessage && (
             <div>
               <input
