@@ -7,7 +7,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo styling */
 .logo a {
   font-size: 24px;
   color: pink;
@@ -15,7 +14,6 @@
   font-weight: bold;
 }
 
-/* Navigation links */
 .navLinks {
   list-style: none;
   display: flex;
@@ -23,7 +21,6 @@
 }
 
 .navLinks li a {
-  /* color: #ECF0F1; */
   text-decoration: none;
   font-size: 16px;
   padding: 5px 10px;
@@ -35,7 +32,6 @@
   border-radius: 5px;
 }
 
-/* Authentication buttons */
 .authButtons a {
   margin-left: 15px;
   text-decoration: none;
