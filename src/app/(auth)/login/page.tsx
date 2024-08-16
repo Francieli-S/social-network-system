@@ -33,12 +33,12 @@ const Login: React.FC = () => {
   const handleRegisterRedirect = () => {
     setUserRegistered(false);
   };
-  
+
   useEffect(() => {
     if (!userRegistered) {
-      redirect('/register'); 
+      redirect('/register');
     }
-  }, [userRegistered])
+  }, [userRegistered]);
 
   return (
     <>

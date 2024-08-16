@@ -8,8 +8,8 @@ import reducer, { StateUsersAuth } from './reducers/reducer';
 
 const store = configureStore({ reducer });
 
-const StoreWrapper = ({children}: React.PropsWithChildren) => {
-  return <Provider store={store}>{children}</Provider>
-} 
+const StoreWrapper = ({ children }: React.PropsWithChildren) => {
+  return <Provider store={store}>{children}</Provider>;
+};
 
-export default StoreWrapper
+export default StoreWrapper;

@@ -1,7 +1,5 @@
 'use client';
 import styles from './Feed.module.css';
-import { StateUsersAuth } from '@/store/reducers/reducer';
-import { useSelector } from 'react-redux';
 
 interface FuncProps {
   addNewFriend(newFriend: IUser): void;
@@ -17,7 +15,7 @@ const Feed: React.FC<FuncProps> = ({ addNewFriend, loggedUser, users }) => {
       </div>
       <div className={styles.feed}>
         {users
-        // Filter out logged user
+          // Filter out logged user
           .filter((user) => loggedUser && user.id !== loggedUser.id)
           .map((user) => (
             <div

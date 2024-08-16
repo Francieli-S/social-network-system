@@ -35,7 +35,12 @@ const reducer = (
         ...state,
         users: [
           ...state.users,
-          { ...action.user, id: Math.floor(Math.random() * (100 - 16)) + 16, friends: [], statusMessage: 'No status message.' },
+          {
+            ...action.user,
+            id: Math.floor(Math.random() * (100 - 16)) + 16,
+            friends: [],
+            statusMessage: 'No status message.',
+          },
         ],
       };
 
@@ -56,7 +61,10 @@ const reducer = (
         ...state,
         users: state.users.map((user) => {
           if (user.id === action.user.id) {
-            return { ...user, friends: [...user.friends].concat(action.newFriend)};
+            return {
+              ...user,
+              friends: [...user.friends].concat(action.newFriend),
+            };
           }
           return user;
         }),

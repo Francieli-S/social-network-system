@@ -2,8 +2,7 @@
 import styles from './page.module.css';
 import { StateUsersAuth } from '@/store/reducers/reducer';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { addFriend, updateStatusMessage } from '@/store/actions/user-action';
 import Feed from '@/components/Feed/Feed';
@@ -36,10 +35,10 @@ const Profile: React.FC = () => {
     loggedUser && dispatch(updateStatusMessage(loggedUser, statusMessage));
   };
 
-  const addNewFriend = (newFriend: IUser):void => {
-    const friendID = newFriend.id
-    loggedUser && dispatch(addFriend(loggedUser, friendID))
-  }
+  const addNewFriend = (newFriend: IUser): void => {
+    const friendID = newFriend.id;
+    loggedUser && dispatch(addFriend(loggedUser, friendID));
+  };
 
   return (
     <div className={styles.container}>
@@ -82,7 +81,11 @@ const Profile: React.FC = () => {
         </div>
       </div>
       <div className={styles.feed}>
-        <Feed addNewFriend={addNewFriend} loggedUser={loggedUser} users={users}/>
+        <Feed
+          addNewFriend={addNewFriend}
+          loggedUser={loggedUser}
+          users={users}
+        />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 // add user
-export function addUser(user: UserWithOptionalId ) {
+export function addUser(user: UserWithOptionalId) {
   const action: UserAction = {
     type: 'ADD_USER',
     user,
@@ -13,7 +13,7 @@ export function updateStatusMessage(user: IUser, newStatusMessage: string) {
   const action: UserAction = {
     type: 'UPDATE_STATUS_MESSAGE',
     user,
-    newStatusMessage
+    newStatusMessage,
   };
   return action;
 }
@@ -23,7 +23,7 @@ export function addFriend(user: IUser, newFriend: number) {
   const action: UserAction = {
     type: 'ADD_FRIEND',
     user,
-    newFriend
+    newFriend,
   };
   return action;
 }
