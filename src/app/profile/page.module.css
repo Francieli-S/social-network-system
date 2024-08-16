@@ -1,10 +1,10 @@
 .container {
   width: 100vw;
   margin: 0 auto;
-  background-color: cornsilk;
+  background-image: linear-gradient(to right, pink, cornsilk);
   display: flex;
   justify-content: center;
-  padding: 80px;
+  padding: 60px;
   gap: 30px;
 }
 
@@ -17,7 +17,6 @@
 
 .feed {
   width: 30%;
-  background-color: cornsilk;
   border-radius: 20px;
   padding: 0 10px 0 10px;
 }
