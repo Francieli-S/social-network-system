@@ -15,7 +15,7 @@ interface UserState {
 // User actions types:
 interface AddUserAction {
   type: 'ADD_USER'
-  user: IUser
+  user: UserWithOptionalId
 }
 
 interface UpdateStatusMessageAction {
