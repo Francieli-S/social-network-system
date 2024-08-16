@@ -35,7 +35,7 @@ const reducer = (
         ...state,
         users: [
           ...state.users,
-          { id: Math.floor(Math.random() * 100), ...action.user },
+          { ...action.user, id: Math.floor(Math.random() * (100 - 16)) + 16, friends: [], statusMessage: 'No status message.' },
         ],
       };
 
@@ -51,10 +51,16 @@ const reducer = (
         }),
       };
 
-    // case 'ADD_FRIEND':
-    //   return {
-    //     ...state, users: [...state.users, {...action.user}]
-    //   }
+    case 'ADD_FRIEND':
+      return {
+        ...state,
+        users: state.users.map((user) => {
+          if (user.id === action.user.id) {
+            return { ...user, friends: [...user.friends].concat(action.newFriend)};
+          }
+          return user;
+        }),
+      };
 
     default:
       return state;
