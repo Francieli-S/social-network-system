@@ -16,9 +16,30 @@
   }
 }
 
-/* body {
+body {
+  background-image: linear-gradient(to right, pink, cornsilk);
+}
 
-} */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.h4 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: 54px;
+  color: #fff;
+  font-weight: bold;
+}
 
 @layer utilities {
   .text-balance {

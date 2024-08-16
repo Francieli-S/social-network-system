@@ -1,20 +1,16 @@
 interface IUser {
-  id: number
+  id: number 
   name: string
   profilePicture?: string
   friends?: number[]
   statusMessage?: string
 }
 
+type UserWithOptionalId = Partial<Pick<IUser, 'id'>> & Omit<IUser, 'id'>;
+
 interface UserState {
   users: IUser[]
 }
-
-// ??
-// interface RootState {
-//   userState: UserState
-//   userAuth: AuthState
-// }
 
 // User actions types:
 interface AddUserAction {
@@ -22,18 +18,18 @@ interface AddUserAction {
   user: IUser
 }
 
-interface SetStatusMessageAction {
-  type: 'SET_STATUS_MESSAGE'
+interface UpdateStatusMessageAction {
+  type: 'UPDATE_STATUS_MESSAGE'
   user: IUser
+  newStatusMessage: string
 }
 
-interface addFriendAction {
+interface AddFriendAction {
   type: 'ADD_FRIEND'
   user: IUser
+  newFriend: number
 }
 
-// later: update user status message
-
-type UserAction = AddUserAction | SetStatusMessageAction | addFriendAction
+type UserAction = AddUserAction | UpdateStatusMessageAction | AddFriendAction
 
 

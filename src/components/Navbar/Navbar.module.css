@@ -1,0 +1,80 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-size: 24px;
+  color: pink;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  background-color: pink;
+  border-radius: 5px;
+}
+
+.authButtons a {
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.loginBtn {
+  background-color: transparent;
+  color: black;
+  border: 2px solid pink;
+}
+
+.loginBtn:hover {
+  background-color: cornsilk;
+  color: #2C3E50;
+}
+
+.signupBtn {
+  background-color:pink;
+  color: #ECF0F1;
+  border: 2px solid transparent;
+}
+
+.signupBtn:hover {
+  background-color: cornsilk;
+  color: black;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navLinks {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .authButtons {
+      margin-top: 10px;
+  }
+}

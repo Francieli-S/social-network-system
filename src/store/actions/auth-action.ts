@@ -3,4 +3,5 @@ export function addAuthUser(auth: IAuth) {
     type: 'LOGIN',
     auth
   }
+  return action
 }

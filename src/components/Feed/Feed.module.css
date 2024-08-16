@@ -1,0 +1,24 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedHeading {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.userCard {
+  background-color: #fff;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.userPicture {
+  width: 15%;
+}
