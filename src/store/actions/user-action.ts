@@ -1,5 +1,5 @@
 // add user
-export function addUser(user: IUser) {
+export function addUser(user: UserWithOptionalId ) {
   const action: UserAction = {
     type: 'ADD_USER',
     user,

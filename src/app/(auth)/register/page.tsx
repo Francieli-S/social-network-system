@@ -17,11 +17,11 @@ const Register: React.FC = () => {
 
   const register = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    const action: IUser = {name, profilePicture}
+    const action: UserWithOptionalId = {name, profilePicture }
     dispatch(addUser(action))
     setUserRegistered(true)
   }
-  console.log(userState);
+  console.log(userState); // I had to keep it to see the registered user id then I can log in.
 
   useEffect(() => {
     if (userRegistered) {

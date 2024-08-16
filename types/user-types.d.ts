@@ -1,10 +1,12 @@
 interface IUser {
-  id?: number // make it optional here is not the best idea, but...
+  id: number 
   name: string
   profilePicture?: string
   friends?: number[]
   statusMessage?: string
 }
+
+type UserWithOptionalId = Partial<Pick<IUser, 'id'>> & Omit<IUser, 'id'>;
 
 interface UserState {
   users: IUser[]
